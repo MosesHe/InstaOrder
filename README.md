@@ -1,6 +1,6 @@
 # InstaOrder
 
-[![Windows Build](https://github.com/JerryAZR/InstaOrder/actions/workflows/windows-build.yml/badge.svg)](https://github.com/JerryAZR/InstaOrder/actions/workflows/windows-build.yml)
+[![Windows Build](https://github.com/MosesHe/InstaOrder/actions/workflows/windows-build.yml/badge.svg)](https://github.com/MosesHe/InstaOrder/actions/workflows/windows-build.yml)
 
 The project depends on openssl (and Qt6 if that isn't obvious). Without the dependencies compilation would fail.
 
