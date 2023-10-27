@@ -23,7 +23,7 @@ jobs:
           Start-Process "openssl_installer.exe" -ArgumentList "/silent /install" -NoNewWindow -Wait
 
       - name: List OpenSSL directory
-        run: dir "C:/Program Files/OpenSSL-Win64"
+        run: dir "C:/Program Files"
         
       - name: Set OPENSSL_ROOT_DIR environment variable
         run: echo "OPENSSL_ROOT_DIR=C:/Program Files/OpenSSL-Win64/" >> $GITHUB_ENV
