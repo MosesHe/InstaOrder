@@ -23,7 +23,7 @@ jobs:
           Start-Process "openssl_installer.exe" -ArgumentList "/silent /install" -NoNewWindow -Wait
 
       - name: List OpenSSL directory
-        run: dir "C:/Program Files"
+        run: dir "C:/Program Files/OpenSSL-Win64"
         
       - name: Set OPENSSL_ROOT_DIR environment variable
         run: echo "OPENSSL_ROOT_DIR=C:/Program Files/OpenSSL-Win64/" >> $GITHUB_ENV
@@ -39,7 +39,7 @@ jobs:
           modules: 'qtwebengine qtwebchannel qtpositioning'
 
       - name: Configure Project
-        run: qt-cmake -S . -B ./build
+        run: qt-cmake -DOPENSSL_ROOT_DIR="C:/Program Files/OpenSSL-Win64/" -DOPENSSL_LIBRARIES="C:/Program Files/OpenSSL-Win64/lib/" -S . -B ./build
 
       - name: Build Project
         working-directory: ./build
