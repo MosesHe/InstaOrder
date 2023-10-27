@@ -5,7 +5,7 @@
 #include <iostream>
 #include <QFile>
 #include <QTextStream>
-
+//trigger
 void messageHandler(QtMsgType type, const QMessageLogContext &context, const QString &msg)
 {
     const char *file = context.file ? context.file : "";
