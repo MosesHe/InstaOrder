@@ -19,7 +19,7 @@ jobs:
       
       - name: Download and Install OpenSSL
         run: |
-          Invoke-WebRequest -Uri "https://slproweb.com/download/Win64OpenSSL_Light-3_0_11.exe" -OutFile "openssl_installer.exe"
+          Invoke-WebRequest -Uri "https://slproweb.com/download/Win64OpenSSL-3_0_11.exe" -OutFile "openssl_installer.exe"
           Start-Process "openssl_installer.exe" -ArgumentList "/silent /install" -NoNewWindow -Wait
 
       - name: List OpenSSL directory
