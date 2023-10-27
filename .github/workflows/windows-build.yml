@@ -22,8 +22,11 @@ jobs:
           Invoke-WebRequest -Uri "https://slproweb.com/download/Win64OpenSSL_Light-3_0_11.exe" -OutFile "openssl_installer.exe"
           Start-Process "openssl_installer.exe" -ArgumentList "/silent /install" -NoNewWindow -Wait
 
+      - name: List OpenSSL directory
+        run: dir C:/Program Files
+        
       - name: Set OPENSSL_ROOT_DIR environment variable
-        run: echo "OPENSSL_ROOT_DIR=C:/Program Files/OpenSSL/" >> $GITHUB_ENV
+        run: echo "OPENSSL_ROOT_DIR=C:/Program Files/OpenSSL-Win64/" >> $GITHUB_ENV
 
       - name: Install Qt
         uses: jurplel/install-qt-action@v3
