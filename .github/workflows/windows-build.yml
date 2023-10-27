@@ -26,7 +26,7 @@ jobs:
         run: dir "C:/Program Files"
         
       - name: Set OPENSSL_ROOT_DIR environment variable
-        run: echo "OPENSSL_ROOT_DIR=C:/Program Files/OpenSSL-Win64/" >> $GITHUB_ENV
+        run: echo "OPENSSL_ROOT_DIR=C:/Program Files/OpenSSL/" >> $GITHUB_ENV
 
       - name: Install Qt
         uses: jurplel/install-qt-action@v3
@@ -39,8 +39,8 @@ jobs:
           modules: 'qtwebengine qtwebchannel qtpositioning'
 
       - name: Configure Project
-        run: qt-cmake -DOPENSSL_ROOT_DIR="C:/Program Files/OpenSSL-Win64/" -DOPENSSL_LIBRARIES="C:/Program Files/OpenSSL-Win64/lib/" -S . -B ./build
-
+        run: qt-cmake -S . -B ./build
+        
       - name: Build Project
         working-directory: ./build
         run: cmake --build .
