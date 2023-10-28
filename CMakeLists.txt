@@ -14,7 +14,9 @@ set(BUILD_SHARED_LIBS ON)
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets WebEngineWidgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets WebEngineWidgets)
 
+set(BUILD_SHARED_LIBS OFF)
 add_subdirectory(easyssl)
+set(BUILD_SHARED_LIBS ON)
 
 set(PROJECT_SOURCES
         main.cpp
