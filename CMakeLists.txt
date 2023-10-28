@@ -9,14 +9,12 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(BUILD_SHARED_LIBS ON)
-#et(EASYSSL_STATIC_SSL ON)
+set(EASYSSL_STATIC_SSL ON)
 
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets WebEngineWidgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets WebEngineWidgets)
 
-set(BUILD_SHARED_LIBS OFF)
 add_subdirectory(easyssl)
-set(BUILD_SHARED_LIBS ON)
 
 set(PROJECT_SOURCES
         main.cpp
